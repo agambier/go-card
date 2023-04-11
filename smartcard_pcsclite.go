@@ -129,9 +129,9 @@ func (r *Reader) WaitUntilCardRemoved() {
 }
 
 // Connect to card.
-func (r *Reader) Connect() (*Card, error) {
+func (r *Reader) Connect(protocols uint32) (*Card, error) {
 	cardID, protocol, err := r.context.client.CardConnect(
-		r.context.ctxID, r.reader.Name())
+		r.context.ctxID, r.reader.Name(), protocols)
 	if err != nil {
 		return nil, err
 	}

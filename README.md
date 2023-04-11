@@ -33,12 +33,12 @@ None
 
 Usage
 -----
-    
+
     import (
         "fmt"
-        "github.com/sf1/go-card/smartcard"
+        "github.com/agambier/go-card/smartcard"
     )
-    
+
     ctx, err := smartcard.EstablishContext()
     // handle error, if any
     defer ctx.Release()
@@ -50,7 +50,7 @@ Usage
     // handle error, if any
     defer card.Disconnect()
 
-    fmt.Printf("Card ATR: %s\n", card.ATR()) 
+    fmt.Printf("Card ATR: %s\n", card.ATR())
     command := SelectCommand(0xa0, 0x00, 0x00, 0x00, 0x62, 0x03, 0x01, 0xc, 0x01, 0x01)
     response, err := card.TransmitAPDU(command)
     // handle error, if any

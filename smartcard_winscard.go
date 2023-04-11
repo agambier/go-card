@@ -5,7 +5,7 @@ package smartcard
 
 import (
 	"fmt"
-	"github.com/agambier/go-card/smartcard/pcsc"
+	"github.com/agambier/smartcard/pcsc"
 	"time"
 )
 

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/agambier/go-card/smartcard"
+	"github.com/agambier/smartcard"
 )
 
 func main() {

@@ -6,7 +6,7 @@ package smartcard
 import (
 	"time"
 
-	"github.com/agambier/go-card/smartcard/pcsc"
+	"github.com/agambier/smartcard/pcsc"
 )
 
 // A smart card context is required to access readers and cards.

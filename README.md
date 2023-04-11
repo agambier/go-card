@@ -36,7 +36,7 @@ Usage
 
     import (
         "fmt"
-        "github.com/agambier/go-card/smartcard"
+        "github.com/agambier/smartcard"
     )
 
     ctx, err := smartcard.EstablishContext()

@@ -354,9 +354,11 @@ func (client *PCSCLiteClient) Transmit(card int32, protocol uint32,
 	if tstruct.rv != SCARD_S_SUCCESS {
 		return 0, fmt.Errorf("transmission failed: %s", errorString(tstruct.rv))
 	}
-	_, err = client.connection.Read(recvBuffer)
-	if err != nil {
-		return 0, err
+	if tstruct.recvLength != 0 {
+		_, err = client.connection.Read(recvBuffer)
+		if err != nil {
+			return 0, err
+		}
 	}
 	return tstruct.recvLength, nil
 }
